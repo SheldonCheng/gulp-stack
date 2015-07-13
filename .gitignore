@@ -1,0 +1,16 @@
+ # Ignore OS generated files
+*.DS_Store
+Icon?
+.[Tt]humbs.db
+.Trashes
+
+# Ignore temporary files
+/.sass-cache/*
+.tmp
+*.css.map
+
+# Ignore workspace files
+/bower_components/*
+/build/*
+/node_modules/*
+/.bundle/*
