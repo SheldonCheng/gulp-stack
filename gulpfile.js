@@ -4,7 +4,8 @@ var gulp = require("gulp"),
     concat = require("gulp-concat"),
     livereload = require("gulp-livereload"),
     del = require('del'),
-    runSequence = require('run-sequence');
+    runSequence = require('run-sequence'),
+    changed = require('gulp-changed');
 
  var jslibs = [];
  var csslibs = [];
@@ -34,6 +35,7 @@ gulp.task('copy', function(){
 
 	// Copy
 	gulp.src(['**','!js','!js/**','!sass','!sass/**'], {cwd: 'source'})
+  .pipe(changed('build/'))
 	.pipe(gulp.dest('build/'));
 
 	// Copy lib and vendor files
@@ -53,6 +55,7 @@ gulp.task('watch', function(){
   livereload.listen();
   gulp.watch('source/sass/**/*.sass', ['sass']);
   gulp.watch('source/js/**/*.js', ['scripts']);
+  gulp.watch('source/**/*.html', ['copy']);
 });
 
 // Clean
