@@ -13,7 +13,8 @@ var gulp = require("gulp"),
  gulp.task('sass', function(){
  	return sass('source/sass/app.sass', {
  		style: 'expanded',
- 		bundleExec: true
+ 		bundleExec: true,
+    loadPath: ['bower_components/susy/sass']
  	})
  	.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
  	.pipe(gulp.dest('build/css'))

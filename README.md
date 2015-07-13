@@ -10,5 +10,6 @@ Base files adapted from [Initializr](http://www.initializr.com/) responsive boil
 
 ```bash
 npm install
+bower install
 gulp
 ```
