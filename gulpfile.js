@@ -7,8 +7,8 @@ var gulp = require("gulp"),
     runSequence = require('run-sequence'),
     changed = require('gulp-changed');
 
- var jslibs = [];
- var csslibs = [];
+ var jslibs = ['selectize/dist/js/standalone/selectize.min.js'];
+ var csslibs = ['selectize/dist/css/selectize.css'];
 
  //Styles
  gulp.task('sass', function(){
@@ -39,7 +39,7 @@ gulp.task('copy', function(){
 	.pipe(gulp.dest('build/'));
 
 	// Copy lib and vendor files
-	/*
+	
   // js
   gulp.src(jslibs, {cwd: 'bower_components'})
   .pipe(gulp.dest('build/js/vendor/'));
@@ -47,7 +47,7 @@ gulp.task('copy', function(){
   //css
   gulp.src(csslibs, {cwd: 'bower_components'})
   .pipe(gulp.dest('build/css/vendor/'));
-  */
+
 });
 
 // Watch
