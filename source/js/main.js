@@ -11,4 +11,9 @@ $(document).ready(function(){
     $(target).addClass('active').siblings('.active').removeClass('active');
   });
 
+  // Accordion component
+  $('.js-accordion').on('click', '.accordion-item > a', function(e){
+    e.preventDefault();
+    $(this).parent('li').addClass('active').siblings('.active').removeClass('active');
+  });
 });
