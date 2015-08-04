@@ -1,5 +1,16 @@
 $(document).ready(function(){
 
+  // Dropdown component
+  $('.js-dropdown').on('click', '.dropdown-link', function(e){
+    e.preventDefault();
+    $(e.delegateTarget).toggleClass('open');
+  });
+  $(document).on('click', function(e){
+    $('.js-dropdown.open').filter(function(){
+      return !$(e.target).closest('.js-dropdown').is(this);
+    }).removeClass('open');
+  });
+
   // Selectize component
   $('.js-select').selectize();
 
