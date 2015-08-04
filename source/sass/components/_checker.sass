@@ -1,0 +1,19 @@
+.checker-input
+  display: none
+  opacity: 0
+  position: absolute
+  z-index: -1
+
+.checker-label
+  &:before
+    content: " "
+    display: inline-block
+    border: 1px solid #ccc
+    width: 10px
+    height: 10px
+    margin-right: 5px
+
+.checker-input:checked
+  + .checker-label
+    &:before
+      background-color: black
