@@ -4,7 +4,7 @@ $(document).ready(function(){
   $('.js-select').selectize();
 
   // Tabs component
-  $('.js-tabs').on('click', '.tabs-link a',function(e){
+  $('.js-tabs').on('click', '.tabs-title a',function(e){
     e.preventDefault();
     $(this).parent('li').addClass('active').siblings('.active').removeClass('active');
     var target = $(this).attr('href');
