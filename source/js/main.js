@@ -16,4 +16,11 @@ $(document).ready(function(){
     e.preventDefault();
     $(this).parent('li').addClass('active').siblings('.active').removeClass('active');
   });
+
+  // Collapse component
+  $('.js-collapse').on('click','.collapse-link', function(e){
+    e.preventDefault();
+    var target = $(this).attr('href');
+    $(target).closest('.collapse').toggleClass('active');
+  });
 });
