@@ -1,0 +1,8 @@
+{
+  "name": "gulp-stack",
+  "version": "0.0.0",
+  "private": true,
+  "devDependencies": {
+    "selectize": "~0.12.1"
+  }
+}
