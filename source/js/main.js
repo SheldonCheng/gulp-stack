@@ -25,7 +25,7 @@ $(document).ready(function(){
   // Accordion component
   $('.js-accordion').on('click', '.accordion-item > a', function(e){
     e.preventDefault();
-    $(this).parent('li').addClass('active').siblings('.active').removeClass('active');
+    $(this).parent('li').toggleClass('active').siblings('.active').removeClass('active');
   });
 
   // Collapse component
